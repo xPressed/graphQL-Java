@@ -1,0 +1,41 @@
+type Product{
+    id: ID!
+    text: String!
+    qty: Int!
+    completed: Boolean!
+    customer: Customer
+}
+
+type Customer{
+    id: ID!
+    surname: String!
+    name: String!
+    patronymic: String
+    productList: [Product]
+}
+
+type Mutation{
+    addCustomer(customerInput: CustomerInput): Customer
+    addProduct(productInput: ProductInput): Product
+    deleteCustomer(customerID: ID!): Customer
+    deleteProduct(productID: ID!): Product
+}
+
+input CustomerInput{
+    surname: String!
+    name: String!
+    patronymic: String
+}
+
+input ProductInput{
+    text: String!
+    qty: Int!
+    completed: Boolean!
+    customerID: ID!
+}
+
+type Query{
+    findProducts: [Product]
+    findCustomers: [Customer]
+    findProductsByCustomer(customerID: ID!): [Product]
+}

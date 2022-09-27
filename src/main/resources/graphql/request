@@ -1,0 +1,40 @@
+# query {
+# #   findProducts {
+# #     text
+# #     qty
+# #     completed
+# #     customer {
+# #       id
+# #     }
+# #   }
+
+# #   findCustomers {
+# #     id
+# #     surname
+# #     name
+# #     patronymic
+# #   }
+
+#   # findProductsByCustomer(customerID:2) {
+#   #   text
+#   # }
+# }
+
+# mutation {
+#   # addCustomer(customerInput: {surname:"Block",name:"Alexandr"}) {
+#   #   id
+#   #   surname
+#   # }
+
+# #   addProduct(productInput: {text:"sand",qty:5,completed:true,customerID:2}) {
+# #     id
+# #   }
+
+#   # deleteCustomer(customerID:4) {
+#   #   id
+#   # }
+
+#   # deleteProduct(productID:2) {
+#   #   id
+#   # }
+# }
